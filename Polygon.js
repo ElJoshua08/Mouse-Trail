@@ -41,6 +41,10 @@ class Polygon {
     this.pos.y += this.vel.y * deltaTime;
 
     this.radius -= randFloat(0.1, 0.3);
+
+    if (this.radius > 50) {
+      this.radius -= 0.3;
+    }
   }
 
   draw() {

@@ -85,8 +85,8 @@ function createParticles() {
     angle = degreesToRadians(angle);
 
     // Calculate vel
-    let velX = Math.cos(angle) * randInt(1, 5);
-    let velY = Math.sin(angle) * randInt(1, 5);
+    let velX = Math.cos(angle) * randInt(3, 7);
+    let velY = Math.sin(angle) * randInt(3, 7);
 
     particles.push(
       new Polygon(
