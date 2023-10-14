@@ -64,6 +64,23 @@ window.addEventListener("mousemove", (e) => {
   mouse.x = e.x;
   mouse.y = e.y;
 
+  console.log(e)
+
+  if (particles.length < maxParticles) {
+    setTimeout(() => {
+      createParticles();
+    }, 50);
+  }
+});
+
+window.addEventListener("touchmove", (e) => {
+  prevMouse.x = mouse.x;
+  prevMouse.y = mouse.y;
+  mouse.x = e.changedTouches[0].pageX;
+  mouse.y = e.changedTouches[0].pageY;
+
+  console.log(e);
+
   if (particles.length < maxParticles) {
     setTimeout(() => {
       createParticles();
