@@ -74,6 +74,8 @@ window.addEventListener("mousemove", (e) => {
 });
 
 window.addEventListener("touchmove", (e) => {
+  e.preventDefault()
+
   prevMouse.x = mouse.x;
   prevMouse.y = mouse.y;
   mouse.x = e.changedTouches[0].pageX;
